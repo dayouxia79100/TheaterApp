@@ -1,13 +1,16 @@
-package com.ming.dayouxia.theaterapp;
+package com.ming.dayouxia.theaterapp.tabhostfragment;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 
+import com.ming.dayouxia.theaterapp.R;
+import com.ming.dayouxia.theaterapp.TheaterHomeTabsFragmentV2;
 
-public class TheaterHomeTabHostActivity extends FragmentActivity {
 
-    private TheaterHomeTabHostFragment mTabFragment;
+public class TheaterTestingActivity extends FragmentActivity {
+
+    private TheaterHomeTabsFragmentV2 mFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,11 +21,11 @@ public class TheaterHomeTabHostActivity extends FragmentActivity {
 
     private void setUpFragment(){
         FragmentManager fm = getSupportFragmentManager();
-        mTabFragment = (TheaterHomeTabHostFragment) fm.findFragmentById(R.id.container);
-        if(mTabFragment == null){
-            mTabFragment = new TheaterHomeTabHostFragment();
+        mFragment = (TheaterHomeTabsFragmentV2) fm.findFragmentById(R.id.container);
+        if(mFragment == null){
+            mFragment = new TheaterHomeTabsFragmentV2();
             fm.beginTransaction()
-                    .replace(R.id.container, mTabFragment)
+                    .replace(R.id.container, mFragment)
                     .commit();
         }
     }

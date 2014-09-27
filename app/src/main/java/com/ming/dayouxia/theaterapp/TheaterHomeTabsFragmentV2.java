@@ -3,32 +3,58 @@ package com.ming.dayouxia.theaterapp;
 import android.app.ActionBar;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 /**
  * Created by dayouxia on 9/27/14.
  */
-public class TheaterHomeTabsActivity extends FragmentActivity {
 
+public class TheaterHomeTabsFragmentV2 extends Fragment {
 
     private TheaterPagerAdapter mPagerAdapter;
     private ViewPager mViewPager;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.home_tab_pager);
-        setupViewPager();
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View v = inflater.inflate(R.layout.home_tab_pager, container, false);
+        mViewPager = (ViewPager)v.findViewById(R.id.pager);
+        mPagerAdapter = new TheaterPagerAdapter(
+                getChildFragmentManager());
+
+        mViewPager = (ViewPager) v.findViewById(R.id.pager);
+        mViewPager.setAdapter(mPagerAdapter);
+
+        mViewPager.setOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener() {
+            @Override
+            public void onPageSelected(int position) {
+                getActivity().getActionBar().setSelectedNavigationItem(position);
+            }
+        });
         setupTabs();
-        setupDrawer();
+        return v;
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        destroyTabs();
+
+    }
+
+    private void destroyTabs(){
+        final ActionBar actionBar = getActivity().getActionBar();
+        actionBar.removeAllTabs();
     }
 
     private void setupTabs(){
-        final ActionBar actionBar = getActionBar();
+        final ActionBar actionBar = getActivity().getActionBar();
 
         // Specify that tabs should be displayed in the action bar.
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
@@ -38,7 +64,6 @@ public class TheaterHomeTabsActivity extends FragmentActivity {
         ActionBar.TabListener tabListener = new ActionBar.TabListener() {
             @Override
             public void onTabSelected(ActionBar.Tab tab, FragmentTransaction fragmentTransaction) {
-
                 mViewPager.setCurrentItem(tab.getPosition());
             }
 
@@ -60,26 +85,6 @@ public class TheaterHomeTabsActivity extends FragmentActivity {
                             .setText("Tab " + (i + 1))
                             .setTabListener(tabListener));
         }
-    }
-
-    private void setupViewPager(){
-        mViewPager = (ViewPager)findViewById(R.id.pager);
-        mPagerAdapter = new TheaterPagerAdapter(
-                getSupportFragmentManager());
-
-        mViewPager = (ViewPager) findViewById(R.id.pager);
-        mViewPager.setAdapter(mPagerAdapter);
-
-        mViewPager.setOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener(){
-            @Override
-            public void onPageSelected(int position) {
-                getActionBar().setSelectedNavigationItem(position);
-            }
-        });
-    }
-
-    private void setupDrawer(){
-
     }
 
     public class TheaterPagerAdapter extends FragmentStatePagerAdapter {

@@ -4,5 +4,18 @@
     <string name="app_name">TheaterApp</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="drawer_open">drawer open</string>
+    <string name="drawer_close">drawer close</string>
+
+    
+    <string-array name="drawer_list">
+        <item>News Event</item>
+        <item>Columbusland</item>
+        <item>Now Showing</item>
+        <item>About us</item>
+        <item>About the App</item>
+        <item>User\'s email</item>
+        <item>Sign out</item>
+    </string-array>
 
 </resources>
