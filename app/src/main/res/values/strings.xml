@@ -4,18 +4,27 @@
     <string name="app_name">TheaterApp</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+
+    <!--Tab names for movie list fragment -->
+    <string name="movie_now_showing">Now Showing</string>
+    <string name="movie_coming_soon">Comming Soon</string>
+    
+    
+    <!-- Navigation drawer open and close text-->
     <string name="drawer_open">drawer open</string>
     <string name="drawer_close">drawer close</string>
 
-    
+    <!--Options available in the drawer -->
     <string-array name="drawer_list">
+        <item>In Theater</item>
         <item>News Event</item>
         <item>Columbusland</item>
-        <item>Now Showing</item>
-        <item>About us</item>
-        <item>About the App</item>
         <item>User\'s email</item>
+        <item>About the App</item>
+        <item>About us</item>
         <item>Sign out</item>
     </string-array>
+
+    <!-- -->
 
 </resources>

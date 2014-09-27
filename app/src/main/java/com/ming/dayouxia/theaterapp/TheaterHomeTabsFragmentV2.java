@@ -78,14 +78,17 @@ public class TheaterHomeTabsFragmentV2 extends Fragment {
             }
         };
 
-        // Add 3 tabs, specifying the tab's text and TabListener
-        for (int i = 0; i < 2; i++) {
-            actionBar.addTab(
-                    actionBar.newTab()
-                            .setText("Tab " + (i + 1))
-                            .setTabListener(tabListener));
+        // add text to tabs
+        actionBar.addTab(
+                actionBar.newTab()
+                        .setText(getResources().getString(R.string.movie_now_showing))
+                        .setTabListener(tabListener));
+        actionBar.addTab(
+                actionBar.newTab()
+                        .setText(getResources().getString(R.string.movie_coming_soon))
+                        .setTabListener(tabListener));
+
         }
-    }
 
     public class TheaterPagerAdapter extends FragmentStatePagerAdapter {
         public TheaterPagerAdapter(FragmentManager fm) {
@@ -95,10 +98,8 @@ public class TheaterHomeTabsFragmentV2 extends Fragment {
         @Override
         public Fragment getItem(int i) {
 
+            // return detail fragment, need to pass some data through bundle.
             Fragment fragment = TheaterHomeListFragment.newInstance();
-//            if(i == 0) fragment = TheaterHomeListFragment.newInstance();
-//            if(i == 1) fragment = new MovieDetailFragment();
-
             return fragment;
         }
 
