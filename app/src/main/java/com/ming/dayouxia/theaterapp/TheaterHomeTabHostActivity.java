@@ -5,24 +5,24 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 
 
-public class TheaterHomeListActivity extends FragmentActivity {
+public class TheaterHomeTabHostActivity extends FragmentActivity {
 
-    private TheaterHomeListFragment mListFragment;
+    private TheaterHomeTabHostFragment mTabFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.home_tab_pager);
+        setContentView(R.layout.activity_theater_home);
         setUpFragment();
     }
 
     private void setUpFragment(){
         FragmentManager fm = getSupportFragmentManager();
-        mListFragment = (TheaterHomeListFragment) fm.findFragmentById(R.id.container);
-        if(mListFragment == null){
-            mListFragment = TheaterHomeListFragment.newInstance();
+        mTabFragment = (TheaterHomeTabHostFragment) fm.findFragmentById(R.id.container);
+        if(mTabFragment == null){
+            mTabFragment = new TheaterHomeTabHostFragment();
             fm.beginTransaction()
-                    .replace(R.id.container, mListFragment)
+                    .replace(R.id.container, mTabFragment)
                     .commit();
         }
     }
