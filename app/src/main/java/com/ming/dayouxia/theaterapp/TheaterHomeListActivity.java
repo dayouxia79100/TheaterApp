@@ -12,9 +12,8 @@ public class TheaterHomeListActivity extends FragmentActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_theater_home);
+        setContentView(R.layout.home_tab_pager);
         setUpFragment();
-
     }
 
     private void setUpFragment(){
