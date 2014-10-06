@@ -23,8 +23,13 @@
         <item>About the App</item>
         <item>About us</item>
         <item>Sign out</item>
+        <item>Welcome Page</item>
     </string-array>
 
+    <!--These fields are for welcome page -->
+    <string name="ranklabel">"Rank : "</string>
+    <string name="countrylabel">"Country : "</string>
+    <string name="populationlabel">"Population : "</string>
     <!-- -->
 
 </resources>

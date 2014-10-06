@@ -1,5 +1,6 @@
 package com.ming.dayouxia.theaterapp;
 
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
@@ -120,6 +121,11 @@ public class TheaterDrawerMainActivity extends FragmentActivity {
             fragment = new TheaterHomeTabsFragmentV2();
         }
 
+        if(position == 7)
+        {
+            Intent welcomePageIntent = new Intent(this,TheaterWelcomeActivity.class);
+            startActivity(welcomePageIntent);
+        }
         if(fragment != null){
             FragmentManager fragmentManager = getSupportFragmentManager();
             fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
