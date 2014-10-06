@@ -118,6 +118,8 @@ public class TheaterDrawerMainActivity extends FragmentActivity {
         Fragment fragment = new Fragment();
         if(position == 0){
             fragment = new TheaterHomeTabsFragmentV2();
+        }else if(position==3){
+            fragment = new LoginActivity.PlaceholderFragment();
         }
 
         if(fragment != null){
