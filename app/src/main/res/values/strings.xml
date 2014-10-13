@@ -26,23 +26,24 @@
 
     <!--  -->
     <string name="HNT_PASSWORD">Password</string>
-        <string name="title_activity_login">Login</string>
-        <string name="login_title">Log in to access your account!</string>
-        <string name="emailaddress">Email Address</string>
-        <string name="login">Log In</string>
-        <string name="notnow">Not Now</string>
-        <string name="signup_title">Creat an account in seconds.</string>
-        <string name="signup">Sign Up</string>
-        <string name="title_activity_signup">Signup</string>
-        <string name="firstname">First Name</string>
-        <string name="lastname">Last Name</string>
-        <string name="allowemail">I do not want to receive email about movie information</string>
-        <string name="title_activity_homepage">Homepage</string>
-        <string name="title_activity_reward">Reward</string>
-        <string name="title_activity_help">Help</string>
-        <string name="title_activity_my_account">MyAccount</string>
-        <string name="title_activity_account">Account</string>
-        <string name="content_activity_help">This is a Help document.</string>
-        <string name="homepage_welcome">Interact with our HappyTheater, collect points to get rewards!</string>
+    <string name="title_activity_login">Login</string>
+    <string name="login_title">Log in to access your account!</string>
+    <string name="emailaddress">Email Address</string>
+    <string name="login">Log In</string>
+    <string name="notnow">Not Now</string>
+    <string name="signup_title">Creat an account in seconds.</string>
+    <string name="signup">Sign Up</string>
+    <string name="title_activity_signup">Signup</string>
+    <string name="firstname">First Name</string>
+    <string name="lastname">Last Name</string>
+    <string name="allowemail">I do not want to receive email about movie information</string>
+    <string name="title_activity_homepage">Homepage</string>
+    <string name="title_activity_reward">Reward</string>
+    <string name="title_activity_help">Help</string>
+    <string name="title_activity_my_account">MyAccount</string>
+    <string name="title_activity_account">Account</string>
+    <string name="content_activity_help">This is a Help document.</string>
+    <string name="homepage_welcome">Interact with our HappyTheater, collect points to get rewards!</string>
+    <string name="title_activity_columbus_land">ColumbusLand</string>
 
 </resources>

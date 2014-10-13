@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.ming.dayouxia.theaterapp" >
 
+    <uses-permission android:name="android.permission.INTERNET" />
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -28,6 +29,14 @@
         <activity
             android:name=".LoginActivity"
             android:label="@string/title_activity_login"
+            android:parentActivityName=".TheaterDrawerMainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ming.dayouxia.theaterapp.TheaterDrawerMainActivity" />
+        </activity>
+        <activity
+            android:name=".CbuslandActivity"
+            android:label="@string/title_activity_columbus_land"
             android:parentActivityName=".TheaterDrawerMainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
