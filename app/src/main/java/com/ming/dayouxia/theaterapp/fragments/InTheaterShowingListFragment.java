@@ -1,4 +1,4 @@
-package com.ming.dayouxia.theaterapp;
+package com.ming.dayouxia.theaterapp.fragments;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,18 +11,22 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.ming.dayouxia.theaterapp.MovieDetailActivity;
+import com.ming.dayouxia.theaterapp.R;
 import com.ming.dayouxia.theaterapp.model.Movie;
 
 import java.util.ArrayList;
 
 
-public class TheaterHomeListFragment extends Fragment {
+// this fragment displays now or coming soon.
+
+public class InTheaterShowingListFragment extends Fragment {
 
     private ListView mListView;
 
 
-    public static TheaterHomeListFragment newInstance(){
-        TheaterHomeListFragment fragment = new TheaterHomeListFragment();
+    public static InTheaterShowingListFragment newInstance(){
+        InTheaterShowingListFragment fragment = new InTheaterShowingListFragment();
         return fragment;
     }
 

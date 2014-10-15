@@ -16,9 +16,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.ming.dayouxia.theaterapp.fragments.ColumbusLandFragment;
+import com.ming.dayouxia.theaterapp.fragments.InTheaterTabsFragment;
 import com.ming.dayouxia.theaterapp.fragments.LoginFragment;
-import com.ming.dayouxia.theaterapp.fragments.TheaterHomeTabsFragmentV2;
-
 
 // note that drawer image needs to be updated for different density screen.
 public class TheaterDrawerMainActivity extends FragmentActivity {
@@ -118,7 +117,7 @@ public class TheaterDrawerMainActivity extends FragmentActivity {
 
         Fragment fragment = new Fragment();
         if(position == 0) {
-            fragment = new TheaterHomeTabsFragmentV2();
+            fragment = new InTheaterTabsFragment();
         }else if(position==2){
             fragment = new ColumbusLandFragment();
         }else if(position==3){

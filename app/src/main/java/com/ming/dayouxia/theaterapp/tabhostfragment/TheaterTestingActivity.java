@@ -5,12 +5,12 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 
 import com.ming.dayouxia.theaterapp.R;
-import com.ming.dayouxia.theaterapp.fragments.TheaterHomeTabsFragmentV2;
+import com.ming.dayouxia.theaterapp.fragments.InTheaterTabsFragment;
 
 
 public class TheaterTestingActivity extends FragmentActivity {
 
-    private TheaterHomeTabsFragmentV2 mFragment;
+    private InTheaterTabsFragment mFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,9 +21,9 @@ public class TheaterTestingActivity extends FragmentActivity {
 
     private void setUpFragment(){
         FragmentManager fm = getSupportFragmentManager();
-        mFragment = (TheaterHomeTabsFragmentV2) fm.findFragmentById(R.id.container);
+        mFragment = (InTheaterTabsFragment) fm.findFragmentById(R.id.container);
         if(mFragment == null){
-            mFragment = new TheaterHomeTabsFragmentV2();
+            mFragment = new InTheaterTabsFragment();
             fm.beginTransaction()
                     .replace(R.id.container, mFragment)
                     .commit();

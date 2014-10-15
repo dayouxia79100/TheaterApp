@@ -11,7 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.ming.dayouxia.theaterapp.R;
-import com.ming.dayouxia.theaterapp.TheaterHomeListFragment;
+import com.ming.dayouxia.theaterapp.fragments.InTheaterShowingListFragment;
 
 /**
  * Created by dayouxia on 9/27/14.
@@ -31,10 +31,10 @@ public class TheaterHomeTabHostFragment extends Fragment {
         mTabHost = (FragmentTabHost)v.findViewById(R.id.tabhost);
         mTabHost.setup(getActivity(), getChildFragmentManager(), R.id.realtabcontent);
         mTabHost.addTab(mTabHost.newTabSpec("fragmentb").setIndicator("Tab 1"),
-                TheaterHomeListFragment.class, null);
+                InTheaterShowingListFragment.class, null);
         mTabHost.getCurrentTabView().setBackgroundColor(Color.DKGRAY);
         mTabHost.addTab(mTabHost.newTabSpec("fragmentc").setIndicator("Tab 2"),
-                TheaterHomeListFragment.class, null);
+                InTheaterShowingListFragment.class, null);
         mTabHost.getTabWidget().getChildTabViewAt(1).setBackgroundColor(Color.DKGRAY);
         return v;
     }

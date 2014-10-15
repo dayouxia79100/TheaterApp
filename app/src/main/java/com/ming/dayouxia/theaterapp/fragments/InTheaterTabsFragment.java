@@ -13,10 +13,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.ming.dayouxia.theaterapp.R;
-import com.ming.dayouxia.theaterapp.TheaterHomeListFragment;
 
 
-public class TheaterHomeTabsFragmentV2 extends Fragment {
+public class InTheaterTabsFragment extends Fragment {
 
     private TheaterPagerAdapter mPagerAdapter;
     private ViewPager mViewPager;
@@ -99,7 +98,7 @@ public class TheaterHomeTabsFragmentV2 extends Fragment {
         public Fragment getItem(int i) {
 
             // return detail fragment, need to pass some data through bundle.
-            Fragment fragment = TheaterHomeListFragment.newInstance();
+            Fragment fragment = InTheaterShowingListFragment.newInstance();
             return fragment;
         }
 
