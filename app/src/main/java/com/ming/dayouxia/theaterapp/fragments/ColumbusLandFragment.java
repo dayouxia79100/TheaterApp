@@ -9,14 +9,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.widget.ProgressBar;
 
 import com.ming.dayouxia.theaterapp.R;
+
+import fr.castorflex.android.circularprogressbar.CircularProgressBar;
 
 public class ColumbusLandFragment extends Fragment{
 
     private static final String WEBSITE_URL = "http://www.columbusland.net";
-    private ProgressBar mProgressWheel;
+    private CircularProgressBar mProgressWheel;
     private WebView mWebView;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -25,7 +26,7 @@ public class ColumbusLandFragment extends Fragment{
         View rootView = inflater.inflate(R.layout.fragment_columbus_land, container, false);
 
         mWebView = (WebView)rootView.findViewById(R.id.webview);
-        mProgressWheel = (ProgressBar) rootView.findViewById(R.id.progress_wheel);
+        mProgressWheel = (CircularProgressBar) rootView.findViewById(R.id.progress_circle);
         mWebView.getSettings().setJavaScriptEnabled(true);
         mWebView.loadUrl(WEBSITE_URL);
         mWebView.setWebViewClient(new WebViewClient(){

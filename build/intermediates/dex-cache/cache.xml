@@ -2,22 +2,10 @@
 <pre-dex-items>
 
     <item
-        dex="/Users/harrylew/Developer/TheaterApp/app/build/intermediates/pre-dexed/debug/support-annotations-20.0.0-bca9cd8c8082330ef7549e0398af852faae531fd.jar"
-        jar="/Applications/Android Studio.app/sdk/extras/android/m2repository/com/android/support/support-annotations/20.0.0/support-annotations-20.0.0.jar"
+        dex="/Users/dayouxia/AndroidStudioProjects/TheaterApp/app/build/intermediates/pre-dexed/debug/classes-b997375a04858eb6871b3aeb7322cd5b0f8a716c.jar"
+        jar="/Users/dayouxia/AndroidStudioProjects/TheaterApp/app/build/intermediates/exploded-aar/com.github.castorflex.smoothprogressbar/library-circular/1.0.1/classes.jar"
         jumboMode="false"
         revision="20.0.0"
-        sha1="9d9013e9ff35fc3756411e62873c363c70c638fa"/>
-    <item
-        dex="/Users/harrylew/Developer/TheaterApp/app/build/intermediates/pre-dexed/debug/internal_impl-20.0.0-7bad8726b3c37573b946f6b9c9524caad00ca61e.jar"
-        jar="/Users/harrylew/Developer/TheaterApp/app/build/intermediates/exploded-aar/com.android.support/support-v4/20.0.0/libs/internal_impl-20.0.0.jar"
-        jumboMode="false"
-        revision="20.0.0"
-        sha1="e40b3078e3fbd353c9f44da8df25a8fc0078209d"/>
-    <item
-        dex="/Users/harrylew/Developer/TheaterApp/app/build/intermediates/pre-dexed/debug/classes-a23b7504e5b020a2e976cb0f70bcbf88188a2a49.jar"
-        jar="/Users/harrylew/Developer/TheaterApp/app/build/intermediates/exploded-aar/com.android.support/support-v4/20.0.0/classes.jar"
-        jumboMode="false"
-        revision="20.0.0"
-        sha1="8694693636ab36910c8100ce527c258ff3ebece0"/>
+        sha1="68bb12d2c7c7b9fc856d1184760fb114ffc4cf30"/>
 
 </pre-dex-items>

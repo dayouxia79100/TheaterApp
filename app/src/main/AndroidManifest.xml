@@ -18,7 +18,13 @@
         <activity android:name=".tabhostfragment.TheaterTestingActivity" >
         </activity>
 
-        <activity android:name=".ScannerActivity"/>
+        <activity android:name=".ScannerActivity"
+            android:parentActivityName=".TheaterDrawerMainActivity"
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".TheaterDrawerMainActivity" />
+        </activity>
 
         <activity
             android:name=".MovieDetailActivity"
