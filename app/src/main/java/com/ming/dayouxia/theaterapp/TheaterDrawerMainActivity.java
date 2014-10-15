@@ -15,9 +15,6 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-/**
- * Created by dayouxia on 9/27/14.
- */
 
 // note that drawer image needs to be updated for different density screen.
 public class TheaterDrawerMainActivity extends FragmentActivity {
@@ -119,7 +116,7 @@ public class TheaterDrawerMainActivity extends FragmentActivity {
         if(position == 0) {
             fragment = new TheaterHomeTabsFragmentV2();
         }else if(position==2){
-            fragment = new CbuslandActivity.PlaceholderFragment();
+            fragment = new ColumbusLandFragment();
         }else if(position==3){
             fragment = new LoginActivity.PlaceholderFragment();
         }

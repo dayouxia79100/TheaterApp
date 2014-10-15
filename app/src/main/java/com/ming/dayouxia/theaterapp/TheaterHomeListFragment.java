@@ -15,9 +15,7 @@ import com.ming.dayouxia.theaterapp.model.Movie;
 
 import java.util.ArrayList;
 
-/**
- * Created by dayouxia on 9/27/14.
- */
+
 public class TheaterHomeListFragment extends Fragment {
 
     private ListView mListView;

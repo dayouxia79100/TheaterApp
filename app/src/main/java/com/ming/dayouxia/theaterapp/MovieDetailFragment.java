@@ -7,9 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-/**
- * Created by dayouxia on 9/27/14.
- */
+
 public class MovieDetailFragment extends Fragment {
 
     @Override
