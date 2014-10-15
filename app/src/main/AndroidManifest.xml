@@ -21,7 +21,13 @@
         <activity android:name=".ScannerActivity"/>
 
         <activity
-            android:name=".MovieDetailActivity" />
+            android:name=".MovieDetailActivity"
+            android:parentActivityName=".TheaterDrawerMainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".TheaterDrawerMainActivity" />
+
+        </activity>
 
     </application>
 

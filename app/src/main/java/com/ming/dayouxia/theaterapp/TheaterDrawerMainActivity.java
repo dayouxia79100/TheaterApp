@@ -19,6 +19,7 @@ import android.widget.ListView;
 import com.ming.dayouxia.theaterapp.fragments.ColumbusLandFragment;
 import com.ming.dayouxia.theaterapp.fragments.InTheaterTabsFragment;
 import com.ming.dayouxia.theaterapp.fragments.LoginFragment;
+import com.ming.dayouxia.theaterapp.fragments.LoginFragmentDialogV2;
 
 // note that drawer image needs to be updated for different density screen.
 public class TheaterDrawerMainActivity extends FragmentActivity {
@@ -105,6 +106,10 @@ public class TheaterDrawerMainActivity extends FragmentActivity {
                 // open scanner activity.
                 Intent i = new Intent(this, ScannerActivity.class);
                 startActivity(i);
+                return true;
+            case R.id.action_login:
+
+                new LoginFragmentDialogV2().show(getSupportFragmentManager(), "login");
                 return true;
 
         }
