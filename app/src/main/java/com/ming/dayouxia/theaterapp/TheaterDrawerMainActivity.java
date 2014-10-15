@@ -116,8 +116,12 @@ public class TheaterDrawerMainActivity extends FragmentActivity {
         // TODO here we will use a switch statement
 
         Fragment fragment = new Fragment();
-        if(position == 0){
+        if(position == 0) {
             fragment = new TheaterHomeTabsFragmentV2();
+        }else if(position==2){
+            fragment = new CbuslandActivity.PlaceholderFragment();
+        }else if(position==3){
+            fragment = new LoginActivity.PlaceholderFragment();
         }
 
         if(fragment != null){
