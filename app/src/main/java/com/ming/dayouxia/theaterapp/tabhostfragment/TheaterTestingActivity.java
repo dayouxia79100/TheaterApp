@@ -5,7 +5,7 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 
 import com.ming.dayouxia.theaterapp.R;
-import com.ming.dayouxia.theaterapp.TheaterHomeTabsFragmentV2;
+import com.ming.dayouxia.theaterapp.fragments.TheaterHomeTabsFragmentV2;
 
 
 public class TheaterTestingActivity extends FragmentActivity {

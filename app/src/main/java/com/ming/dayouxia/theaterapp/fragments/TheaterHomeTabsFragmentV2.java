@@ -1,4 +1,4 @@
-package com.ming.dayouxia.theaterapp;
+package com.ming.dayouxia.theaterapp.fragments;
 
 import android.app.ActionBar;
 import android.app.FragmentTransaction;
@@ -12,6 +12,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.ming.dayouxia.theaterapp.R;
+import com.ming.dayouxia.theaterapp.TheaterHomeListFragment;
 
 
 public class TheaterHomeTabsFragmentV2 extends Fragment {
