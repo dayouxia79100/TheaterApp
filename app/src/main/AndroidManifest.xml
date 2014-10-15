@@ -17,15 +17,11 @@
         </activity>
         <activity android:name=".tabhostfragment.TheaterTestingActivity" >
         </activity>
-        <activity android:name=".unused.TheaterHomeTabsActivity" >
-        </activity>
+
+        <activity android:name=".ScannerActivity"/>
+
         <activity
-            android:name=".MovieDetailActivity"
-            android:parentActivityName=".unused.TheaterHomeTabsActivity" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".TheaterHomeListActivity" />
-        </activity>
+            android:name=".MovieDetailActivity" />
 
     </application>
 

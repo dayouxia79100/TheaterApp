@@ -1,5 +1,6 @@
 package com.ming.dayouxia.theaterapp;
 
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
@@ -79,6 +80,7 @@ public class TheaterDrawerMainActivity extends FragmentActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main_menu, menu);
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -97,6 +99,16 @@ public class TheaterDrawerMainActivity extends FragmentActivity {
         if (mDrawerToggle.onOptionsItemSelected(item)) {
             return true;
         }
+
+        switch (item.getItemId()){
+            case R.id.action_scanner:
+                // open scanner activity.
+                Intent i = new Intent(this, ScannerActivity.class);
+                startActivity(i);
+                return true;
+
+        }
+        // TODO put login here probably, then toggle to logout
 
         return super.onOptionsItemSelected(item);
         }

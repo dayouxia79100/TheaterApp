@@ -4,6 +4,8 @@
     <string name="app_name">TheaterApp</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="action_login">Log in</string>
+    <string name="action_scan">Scan</string>
 
     <!-- Tab names for movie list fragment -->
     <string name="movie_now_showing">Now Showing</string>
