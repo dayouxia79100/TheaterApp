@@ -111,19 +111,18 @@ public class TheaterDrawerMainActivity extends FragmentActivity {
 
                 new LoginFragmentDialogV2().show(getSupportFragmentManager(), "login");
                 return true;
-
         }
         // TODO put login here probably, then toggle to logout
 
         return super.onOptionsItemSelected(item);
-        }
+    }
 
 
     /* The click listner for ListView in the navigation drawer */
     private class DrawerItemClickListener implements ListView.OnItemClickListener {
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-           selectItem(position);
+            selectItem(position);
         }
     }
 
@@ -139,7 +138,12 @@ public class TheaterDrawerMainActivity extends FragmentActivity {
             fragment = new ColumbusLandFragment();
         }else if(position==3){
             fragment = new LoginFragment();
+        }else if (position==6)
+        {
+            Intent intent = new Intent(this, TheaterWelcomeActivity.class);
+            startActivity(intent);
         }
+
 
         if(fragment != null){
             FragmentManager fragmentManager = getSupportFragmentManager();

@@ -34,7 +34,8 @@
                 android:value=".TheaterDrawerMainActivity" />
 
         </activity>
-
+        <activity android:name=".TheaterWelcomeActivity">
+        </activity>
     </application>
 
 </manifest>
