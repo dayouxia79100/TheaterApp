@@ -12,7 +12,13 @@
         jar="C:\Users\Administrator\Desktop\repo\app\build\intermediates\exploded-aar\repo\viewpageindicator\unspecified\classes.jar"
         jumboMode="false"
         revision="20.0.0"
-        sha1="0877aefc3f5a097843ec3096dfc94317c9a96620"/>
+        sha1="e711421b0c0de989e780cfbceb5b98fea8c3ea04"/>
+    <item
+        dex="C:\Users\Administrator\Desktop\repo\app\build\intermediates\pre-dexed\debug\json-simple-1.1.1-90d37ff5b36071ffc72b0f77f665aee6c4ee4c2e.jar"
+        jar="C:\Users\Administrator\Desktop\repo\json-simple-1.1.1.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="5d6f9b6a9ddca2a28c0216cc44efb2e20d9c23b5"/>
     <item
         dex="C:\Users\Administrator\Desktop\repo\app\build\intermediates\pre-dexed\debug\classes-2c94c1c32419ebbf569022beca3af0917f3c0428.jar"
         jar="C:\Users\Administrator\Desktop\repo\app\build\intermediates\exploded-aar\com.github.castorflex.smoothprogressbar\library-circular\1.0.1\classes.jar"
