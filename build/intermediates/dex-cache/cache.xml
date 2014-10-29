@@ -13,5 +13,23 @@
         jumboMode="false"
         revision="20.0.0"
         sha1="9d9013e9ff35fc3756411e62873c363c70c638fa"/>
+    <item
+        dex="/Users/dayouxia/AndroidStudioProjects/TheaterApp/app/build/intermediates/pre-dexed/debug/classes-7f885d9fe4a8b79580a26ed5d8fa48a3f67049f2.jar"
+        jar="/Users/dayouxia/AndroidStudioProjects/TheaterApp/app/build/intermediates/exploded-aar/TheaterApp/metaioSDK/unspecified/classes.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="78547e7182faf0a50dd9f7470a90c698b753b2c2"/>
+    <item
+        dex="/Users/dayouxia/AndroidStudioProjects/TheaterApp/app/build/intermediates/pre-dexed/debug/classes-55aaff49b7789e21240134be2ef07bfaf1a7f282.jar"
+        jar="/Users/dayouxia/AndroidStudioProjects/TheaterApp/app/build/intermediates/exploded-aar/com.romainpiel.shimmer/library/1.2.0/classes.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="2ace5ecb0696f80c31a12bd4d00f49478c386f91"/>
+    <item
+        dex="/Users/dayouxia/AndroidStudioProjects/TheaterApp/app/build/intermediates/pre-dexed/debug/metaiosdk-74ee2f9d0bf6c25fed8aac3c6dd74d055c26785f.jar"
+        jar="/Users/dayouxia/AndroidStudioProjects/TheaterApp/app/build/intermediates/exploded-aar/TheaterApp/metaioSDK/unspecified/libs/metaiosdk.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="b777a803023132f0588e6ffdf110006e67f78fd5"/>
 
 </pre-dex-items>
