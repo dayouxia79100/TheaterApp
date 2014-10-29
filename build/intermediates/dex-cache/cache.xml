@@ -7,5 +7,11 @@
         jumboMode="false"
         revision="20.0.0"
         sha1="68bb12d2c7c7b9fc856d1184760fb114ffc4cf30"/>
+    <item
+        dex="/Users/dayouxia/AndroidStudioProjects/TheaterApp/app/build/intermediates/pre-dexed/debug/support-annotations-20.0.0-204099de0988a3f6f3a9be2fd76cded0c03d245d.jar"
+        jar="/Users/Shared/AndroidSDK/sdk/extras/android/m2repository/com/android/support/support-annotations/20.0.0/support-annotations-20.0.0.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="9d9013e9ff35fc3756411e62873c363c70c638fa"/>
 
 </pre-dex-items>
