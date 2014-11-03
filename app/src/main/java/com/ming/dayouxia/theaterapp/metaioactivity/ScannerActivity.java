@@ -1,4 +1,4 @@
-package com.ming.dayouxia.theaterapp;
+package com.ming.dayouxia.theaterapp.metaioactivity;
 
 import android.app.AlertDialog;
 import android.content.Context;
@@ -14,6 +14,7 @@ import com.metaio.sdk.jni.IGeometry;
 import com.metaio.sdk.jni.IMetaioSDKCallback;
 import com.metaio.sdk.jni.TrackingValuesVector;
 import com.metaio.tools.io.AssetsManager;
+import com.ming.dayouxia.theaterapp.R;
 import com.ming.dayouxia.theaterapp.xmlwriter.Writer;
 import com.romainpiel.shimmer.Shimmer;
 import com.romainpiel.shimmer.ShimmerTextView;
@@ -44,12 +45,6 @@ public class ScannerActivity extends ARViewActivity
     private ShimmerTextView mShimmerTextView;
 
     private MetaioSDKCallbackHandler mCallbackHandler;
-
-    public enum QuestionTypes{
-        SINGLE,
-        MULTIPLE,
-        ALL
-    }
 
     @Override
     public void onCreate(Bundle savedInstanceState)
