@@ -2,22 +2,46 @@
 <pre-dex-items>
 
     <item
+        dex="/Users/harrylew/Developer/TheaterApp/app/build/intermediates/pre-dexed/debug/support-annotations-20.0.0-48a026919140a5876b96525b80a476c413290d13.jar"
+        jar="/Applications/Android Studio.app/sdk 21.25.46/extras/android/m2repository/com/android/support/support-annotations/20.0.0/support-annotations-20.0.0.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="9d9013e9ff35fc3756411e62873c363c70c638fa"/>
+    <item
+        dex="/Users/harrylew/Developer/TheaterApp/app/build/intermediates/pre-dexed/debug/classes-a23b7504e5b020a2e976cb0f70bcbf88188a2a49.jar"
+        jar="/Users/harrylew/Developer/TheaterApp/app/build/intermediates/exploded-aar/com.android.support/support-v4/20.0.0/classes.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="8694693636ab36910c8100ce527c258ff3ebece0"/>
+    <item
+        dex="/Users/harrylew/Developer/TheaterApp/app/build/intermediates/pre-dexed/debug/internal_impl-20.0.0-7bad8726b3c37573b946f6b9c9524caad00ca61e.jar"
+        jar="/Users/harrylew/Developer/TheaterApp/app/build/intermediates/exploded-aar/com.android.support/support-v4/20.0.0/libs/internal_impl-20.0.0.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="e40b3078e3fbd353c9f44da8df25a8fc0078209d"/>
+    <item
+        dex="/Users/harrylew/Developer/TheaterApp/app/build/intermediates/pre-dexed/debug/classes-e666048bed6878e38ad68c0ab5189cafe03ed3da.jar"
+        jar="/Users/harrylew/Developer/TheaterApp/app/build/intermediates/exploded-aar/com.romainpiel.shimmer/library/1.2.0/classes.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="2ace5ecb0696f80c31a12bd4d00f49478c386f91"/>
+    <item
+        dex="/Users/harrylew/Developer/TheaterApp/app/build/intermediates/pre-dexed/debug/json-simple-1.1-71d9893a8fbf9830c6d715e0cdd097e900674bf5.jar"
+        jar="/Users/harrylew/Developer/TheaterApp/json-simple-1.1.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="5e303a03d04e6788dddfa3655272580ae0fc13bb"/>
+    <item
         dex="/Users/harrylew/Developer/TheaterApp/app/build/intermediates/pre-dexed/debug/classes-3ed060c724cdeca4213367afcc584b371ffc0097.jar"
         jar="/Users/harrylew/Developer/TheaterApp/app/build/intermediates/exploded-aar/TheaterApp/viewpageindicator/unspecified/classes.jar"
         jumboMode="false"
         revision="20.0.0"
-        sha1="5b235847a8b5cdc125a396530083e0a8698ecae1"/>
+        sha1="e777135e77fdd67baf5d7a8e7925cf782a116343"/>
     <item
         dex="/Users/harrylew/Developer/TheaterApp/app/build/intermediates/pre-dexed/debug/classes-3980659fb14ac00c7fa494295ec4d164efa90e77.jar"
         jar="/Users/harrylew/Developer/TheaterApp/app/build/intermediates/exploded-aar/com.github.castorflex.smoothprogressbar/library-circular/1.0.1/classes.jar"
         jumboMode="false"
         revision="20.0.0"
         sha1="68bb12d2c7c7b9fc856d1184760fb114ffc4cf30"/>
-    <item
-        dex="/Users/harrylew/Developer/TheaterApp/app/build/intermediates/pre-dexed/debug/json-simple-1.1.1-8ddd7bf0cbe3c99a775a77012c90764f839e2a65.jar"
-        jar="/Users/harrylew/Developer/TheaterApp/json-simple-1.1.1.jar"
-        jumboMode="false"
-        revision="20.0.0"
-        sha1="5d6f9b6a9ddca2a28c0216cc44efb2e20d9c23b5"/>
 
 </pre-dex-items>

@@ -38,5 +38,4 @@ public class ColumbusLandFragment extends Fragment{
 
         return rootView;
     }
-
 }

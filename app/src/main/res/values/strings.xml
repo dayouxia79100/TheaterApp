@@ -33,7 +33,7 @@
     <string name="emailaddress">Email Address</string>
     <string name="login">Log In</string>
     <string name="notnow">Not Now</string>
-    <string name="signup_title">Creat an account in seconds.</string>
+    <string name="signup_title">Create an account in seconds.</string>
     <string name="signup">Sign Up</string>
     <string name="title_activity_signup">Signup</string>
     <string name="firstname">First Name</string>
@@ -45,7 +45,11 @@
     <string name="title_activity_my_account">MyAccount</string>
     <string name="title_activity_account">Account</string>
     <string name="content_activity_help">This is a Help document.</string>
-    <string name="homepage_welcome">Interact with our HappyTheater, collect points to get rewards!</string>
+    <string name="homepage_welcome">Interact with our Gateway theater, collect points to get rewards!</string>
     <string name="title_activity_columbus_land">ColumbusLand</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="HNT_EMAIL_ADDRESS">Please enter your email</string>
+    <string name="reset_password">Forget Password</string>
+    <string name="BTN_EMAIL">Reset Password</string>
 
 </resources>

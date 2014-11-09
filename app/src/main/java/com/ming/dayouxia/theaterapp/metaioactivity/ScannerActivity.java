@@ -7,7 +7,7 @@ import android.os.Environment;
 import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
-
+/*
 import com.metaio.sdk.ARViewActivity;
 import com.metaio.sdk.MetaioDebug;
 import com.metaio.sdk.jni.IGeometry;
@@ -18,7 +18,7 @@ import com.ming.dayouxia.theaterapp.R;
 import com.ming.dayouxia.theaterapp.xmlwriter.Writer;
 import com.romainpiel.shimmer.Shimmer;
 import com.romainpiel.shimmer.ShimmerTextView;
-
+*/
 import org.w3c.dom.Document;
 
 import java.io.File;
@@ -29,9 +29,9 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
 
-public class ScannerActivity extends ARViewActivity
+public class ScannerActivity //extends ARViewActivity
 {
-
+/*
     private List<IGeometry> mImagePlans;
     private boolean dialogShown = false;
 
@@ -268,5 +268,5 @@ public class ScannerActivity extends ARViewActivity
             }
         }
     }
-
+*/
 }

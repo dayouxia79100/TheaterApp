@@ -1,17 +1,22 @@
 package com.ming.dayouxia.theaterapp.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.text.method.PasswordTransformationMethod;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 
 import com.ming.dayouxia.theaterapp.R;
+import com.ming.dayouxia.theaterapp.SignupFragment;
+import com.ming.dayouxia.theaterapp.TheaterWelcomeActivity;
 
 
-public class LoginFragment extends Fragment {
+public class LoginFragment extends Fragment implements View.OnClickListener{
 
     private EditText mPasswordField;
     @Override
@@ -20,6 +25,12 @@ public class LoginFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_login, container, false);
         mPasswordField = (EditText)rootView.findViewById(R.id.password_login_text);
         mPasswordField.setTransformationMethod(new AsteriskPasswordTransformationMethod());
+        Button btnLogin=(Button)rootView.findViewById(R.id.login_button);
+        btnLogin.setOnClickListener(this);
+        Button btnNewUser=(Button)rootView.findViewById(R.id.signup_button);
+        btnNewUser.setOnClickListener(this);
+        Button btnPassReset=(Button)rootView.findViewById(R.id.password_reset);
+        btnPassReset.setOnClickListener(this);
         return rootView;
     }
 
@@ -46,5 +57,21 @@ public class LoginFragment extends Fragment {
         }
     }
 
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.login_button:
+                startActivity(new Intent(getActivity(), TheaterWelcomeActivity.class));
+                break;
+            case R.id.signup_button:
+                Log.d("Login Page", "Signup fragment");
+               // new SignupFragment();
+                //startActivity(new Intent((getActivity(),SignupFragment())));
+                break;
+            case R.id.password_reset:
+                //startActivity(new Intent(this, PasswordResetActivity.class));
+                break;
 
+        }
+    }
 }

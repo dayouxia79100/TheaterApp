@@ -2,18 +2,29 @@ package com.ming.dayouxia.theaterapp.fragments;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.DialogFragment;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.view.GravityCompat;
 import android.text.method.PasswordTransformationMethod;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 
+import com.ming.dayouxia.theaterapp.AccountActivity;
 import com.ming.dayouxia.theaterapp.R;
+import com.ming.dayouxia.theaterapp.ResetPasswordFragment;
+import com.ming.dayouxia.theaterapp.SignupFragment;
+import com.ming.dayouxia.theaterapp.TheaterWelcomeActivity;
 
 
-public class LoginFragmentDialogV2 extends DialogFragment {
+public class LoginFragmentDialogV2 extends DialogFragment implements View.OnClickListener {
 
 
     private EditText mPasswordField;
@@ -27,7 +38,15 @@ public class LoginFragmentDialogV2 extends DialogFragment {
         mPasswordField = (EditText) v.findViewById(R.id.password_login_text);
         mPasswordField.setTransformationMethod(new AsteriskPasswordTransformationMethod());
 
-        return builder.setView(v)
+        Button btnLogin=(Button)v.findViewById(R.id.login_button);
+        btnLogin.setOnClickListener(this);
+        Button btnNewUser=(Button)v.findViewById(R.id.signup_button);
+        btnNewUser.setOnClickListener(this);
+        Button btnPassReset=(Button)v.findViewById(R.id.password_reset);
+        btnPassReset.setOnClickListener(this);
+
+        return builder
+                .setView(v)
                 .create();
     }
 
@@ -51,6 +70,24 @@ public class LoginFragmentDialogV2 extends DialogFragment {
         }
         public CharSequence subSequence(int start, int end) {
             return mSource.subSequence(start, end); // Return default
+        }
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.login_button:
+                startActivity(new Intent(getActivity(), AccountActivity.class));
+                break;
+            case R.id.signup_button:
+                Log.d("Login Page", "Signup fragment");
+                (new SignupFragment()).show(getChildFragmentManager(), "sign up");
+                break;
+            case R.id.password_reset:
+                Log.d("Reset Password","Reset Fragment");
+                (new ResetPasswordFragment()).show(getChildFragmentManager(), "Reset Password");
+                break;
+
         }
     }
 }
