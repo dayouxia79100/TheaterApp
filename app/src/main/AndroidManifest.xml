@@ -38,7 +38,7 @@
         <activity android:name="com.ming.dayouxia.theaterapp.TheaterWelcomeActivity" >
         </activity>
         <activity
-            android:name="com.ming.dayouxia.theaterapp.AccountActivity"
+            android:name=".fragmentsforsignin.AccountActivity"
             android:label="@string/title_activity_account"
             android:parentActivityName="com.ming.dayouxia.theaterapp.TheaterDrawerMainActivity" >
             <meta-data

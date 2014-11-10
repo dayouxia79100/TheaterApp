@@ -27,4 +27,5 @@ dependencies {
     compile 'com.romainpiel.shimmer:library:1.2.0'
     compile project(':viewpageindicator')
     compile files('../json-simple-1.1.jar')
+    compile project(':metaioSDK')
 }

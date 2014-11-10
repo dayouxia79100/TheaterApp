@@ -7,6 +7,24 @@ import android.os.Environment;
 import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
+
+import com.metaio.sdk.ARViewActivity;
+import com.metaio.sdk.MetaioDebug;
+import com.metaio.sdk.jni.IGeometry;
+import com.metaio.sdk.jni.IMetaioSDKCallback;
+import com.metaio.sdk.jni.TrackingValuesVector;
+import com.metaio.tools.io.AssetsManager;
+import com.ming.dayouxia.theaterapp.xmlwriter.Writer;
+import com.romainpiel.shimmer.Shimmer;
+import com.romainpiel.shimmer.ShimmerTextView;
+
+import org.w3c.dom.Document;
+
+import java.io.File;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+
 /*
 import com.metaio.sdk.ARViewActivity;
 import com.metaio.sdk.MetaioDebug;
@@ -18,20 +36,12 @@ import com.ming.dayouxia.theaterapp.xmlwriter.Writer;
 import com.romainpiel.shimmer.Shimmer;
 import com.romainpiel.shimmer.ShimmerTextView;
 */
-import org.w3c.dom.Document;
-
-import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
-
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
 
 
-public class ScannerActivity// extends ARViewActivity
+public class ScannerActivity extends ARViewActivity
 {
 
-   /*private boolean dialogShown = false;
+   private boolean dialogShown = false;
 
     // how many models to be detected.
     private int itemsToDetect = 3;
@@ -55,7 +65,7 @@ public class ScannerActivity// extends ARViewActivity
     {
         mProgressBar = (ProgressBar) findViewById(R.id.progressBar);
         super.onCreate(savedInstanceState);
-        mImagePlans = new ArrayList<IGeometry>();
+        //mImagePlans = new ArrayList<IGeometry>();
         mCallbackHandler = new MetaioSDKCallbackHandler();
     }
 
@@ -79,7 +89,7 @@ public class ScannerActivity// extends ARViewActivity
         firstModel = false;
         secondModel = false;
         thirdModel = false;
-        Log.v("yoloswag", ""+firstModel +secondModel + thirdModel);
+        Log.v("yoloswag", "" + firstModel + secondModel + thirdModel);
     }
 
 
@@ -272,5 +282,4 @@ public class ScannerActivity// extends ARViewActivity
             }
         }
     }
-*/
 }

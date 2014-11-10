@@ -12,7 +12,6 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.ming.dayouxia.theaterapp.R;
-import com.ming.dayouxia.theaterapp.SignupFragment;
 import com.ming.dayouxia.theaterapp.TheaterWelcomeActivity;
 
 

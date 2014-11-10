@@ -1,9 +1,11 @@
-package com.ming.dayouxia.theaterapp;
+package com.ming.dayouxia.theaterapp.fragmentsforsignin;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import com.ming.dayouxia.theaterapp.R;
 
 
 public class AccountActivity extends Activity {

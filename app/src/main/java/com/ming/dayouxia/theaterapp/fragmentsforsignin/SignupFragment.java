@@ -1,4 +1,4 @@
-package com.ming.dayouxia.theaterapp;
+package com.ming.dayouxia.theaterapp.fragmentsforsignin;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -7,6 +7,8 @@ import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.support.v4.app.DialogFragment;
+
+import com.ming.dayouxia.theaterapp.R;
 
 
 public class SignupFragment extends DialogFragment {
