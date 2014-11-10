@@ -90,6 +90,18 @@ public class TheaterDrawerMainActivity extends FragmentActivity {
     public boolean onPrepareOptionsMenu(Menu menu) {
         // If the nav drawer is open, hide action items related to the content view
         boolean drawerOpen = mDrawerLayout.isDrawerOpen(mDrawerList);
+        if(CurrentUserSession.getInstance().isLoggedIn()){
+            MenuItem loginItem = menu.findItem(R.id.action_login);
+            loginItem.setVisible(false);
+            MenuItem logoutItem = menu.findItem(R.id.action_logout);
+            logoutItem.setVisible(true);
+        } else {
+            MenuItem loginItem = menu.findItem(R.id.action_login);
+            loginItem.setVisible(true);
+            MenuItem logoutItem = menu.findItem(R.id.action_logout);
+            logoutItem.setVisible(false);
+        }
+
         return super.onPrepareOptionsMenu(menu);
     }
 
@@ -108,8 +120,10 @@ public class TheaterDrawerMainActivity extends FragmentActivity {
                 startActivity(i);
                 return true;
             case R.id.action_login:
-
                 new LoginFragmentDialogV2().show(getSupportFragmentManager(), "login");
+                return true;
+            case R.id.action_logout:
+                CurrentUserSession.getInstance().setLoggedIn(false);
                 return true;
         }
         // TODO put login here probably, then toggle to logout
