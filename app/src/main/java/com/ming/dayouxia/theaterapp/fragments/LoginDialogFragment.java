@@ -1,36 +1,48 @@
 package com.ming.dayouxia.theaterapp.fragments;
 
-import android.content.Intent;
+import android.app.AlertDialog;
+import android.app.Dialog;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
+import android.support.annotation.NonNull;
+import android.support.v4.app.DialogFragment;
 import android.text.method.PasswordTransformationMethod;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.ming.dayouxia.theaterapp.CurrentUserSession;
 import com.ming.dayouxia.theaterapp.R;
-import com.ming.dayouxia.theaterapp.TheaterWelcomeActivity;
+import com.ming.dayouxia.theaterapp.TheaterDrawerMainActivity;
+import com.ming.dayouxia.theaterapp.fragmentsforsignin.ResetPasswordFragment;
+import com.ming.dayouxia.theaterapp.fragmentsforsignin.SignupFragment;
 
 
-public class LoginFragment extends Fragment implements View.OnClickListener{
+public class LoginDialogFragment extends DialogFragment implements View.OnClickListener {
+
 
     private EditText mPasswordField;
+    @NonNull
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_login, container, false);
-        mPasswordField = (EditText)rootView.findViewById(R.id.password_login_text);
+    public Dialog onCreateDialog(Bundle savedInstanceState) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        LayoutInflater inflater = getActivity().getLayoutInflater();
+
+        View v = inflater.inflate(R.layout.fragment_login, null);
+        mPasswordField = (EditText) v.findViewById(R.id.password_login_text);
         mPasswordField.setTransformationMethod(new AsteriskPasswordTransformationMethod());
-        Button btnLogin=(Button)rootView.findViewById(R.id.login_button);
+
+        Button btnLogin=(Button)v.findViewById(R.id.login_button);
         btnLogin.setOnClickListener(this);
-        Button btnNewUser=(Button)rootView.findViewById(R.id.signup_button);
+        Button btnNewUser=(Button)v.findViewById(R.id.signup_button);
         btnNewUser.setOnClickListener(this);
-        Button btnPassReset=(Button)rootView.findViewById(R.id.password_reset);
+        Button btnPassReset=(Button)v.findViewById(R.id.password_reset);
         btnPassReset.setOnClickListener(this);
-        return rootView;
+
+        return builder
+                .setView(v)
+                .create();
     }
 
     private class AsteriskPasswordTransformationMethod extends PasswordTransformationMethod {
@@ -60,15 +72,18 @@ public class LoginFragment extends Fragment implements View.OnClickListener{
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.login_button:
-                startActivity(new Intent(getActivity(), TheaterWelcomeActivity.class));
+                //startActivity(new Intent(getActivity(), AccountActivity.class));
+                CurrentUserSession.getInstance().setLoggedIn(true);
+                ((TheaterDrawerMainActivity)getActivity()).addHeaderViewIfNeeded();
+                dismiss();
                 break;
             case R.id.signup_button:
                 Log.d("Login Page", "Signup fragment");
-               // new SignupFragment();
-                //startActivity(new Intent((getActivity(),SignupFragment())));
+                (new SignupFragment()).show(getChildFragmentManager(), "sign up");
                 break;
             case R.id.password_reset:
-                //startActivity(new Intent(this, PasswordResetActivity.class));
+                Log.d("Reset Password","Reset Fragment");
+                (new ResetPasswordFragment()).show(getChildFragmentManager(), "Reset Password");
                 break;
 
         }

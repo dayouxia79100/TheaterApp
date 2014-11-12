@@ -14,18 +14,19 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 
 import com.ming.dayouxia.theaterapp.fragments.ColumbusLandFragment;
 import com.ming.dayouxia.theaterapp.fragments.InTheaterTabsFragment;
-import com.ming.dayouxia.theaterapp.fragments.LoginFragment;
-import com.ming.dayouxia.theaterapp.fragments.LoginFragmentDialogV2;
+import com.ming.dayouxia.theaterapp.fragments.LoginDialogFragment;
 
 // note that drawer image needs to be updated for different density screen.
 public class TheaterDrawerMainActivity extends FragmentActivity {
 
     private DrawerLayout mDrawerLayout;
     private ListView mDrawerList;
+    private LinearLayout mUserItem;
     private ActionBarDrawerToggle mDrawerToggle;
 
     private CharSequence mDrawerTitle;
@@ -41,6 +42,7 @@ public class TheaterDrawerMainActivity extends FragmentActivity {
         mOptionsArray = getResources().getStringArray(R.array.drawer_list);
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mDrawerList = (ListView) findViewById(R.id.left_drawer);
+        mUserItem = (LinearLayout)getLayoutInflater().inflate(R.layout.user_list_item, null);
 
         // set a custom shadow that overlays the main content when the drawer opens
         mDrawerLayout.setDrawerShadow(R.drawable.drawer_shadow, GravityCompat.START);
@@ -79,6 +81,32 @@ public class TheaterDrawerMainActivity extends FragmentActivity {
         }
     }
 
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        addHeaderViewIfNeeded();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        removeHeaderViewIfNeeded();
+
+    }
+
+    public void addHeaderViewIfNeeded(){
+
+        if(CurrentUserSession.getInstance().isLoggedIn()){
+            mDrawerList.addHeaderView(mUserItem);
+        }
+
+    }
+
+    public void removeHeaderViewIfNeeded(){
+        mDrawerList.removeHeaderView(mUserItem);
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main_menu, menu);
@@ -100,6 +128,7 @@ public class TheaterDrawerMainActivity extends FragmentActivity {
             loginItem.setVisible(true);
             MenuItem logoutItem = menu.findItem(R.id.action_logout);
             logoutItem.setVisible(false);
+
         }
 
         return super.onPrepareOptionsMenu(menu);
@@ -120,10 +149,11 @@ public class TheaterDrawerMainActivity extends FragmentActivity {
                 startActivity(i);
                 return true;
             case R.id.action_login:
-                new LoginFragmentDialogV2().show(getSupportFragmentManager(), "login");
+                new LoginDialogFragment().show(getSupportFragmentManager(), "login");
                 return true;
             case R.id.action_logout:
                 CurrentUserSession.getInstance().setLoggedIn(false);
+                removeHeaderViewIfNeeded();
                 return true;
         }
         // TODO put login here probably, then toggle to logout
@@ -148,11 +178,11 @@ public class TheaterDrawerMainActivity extends FragmentActivity {
         Fragment fragment = new Fragment();
         if(position == 0) {
             fragment = new InTheaterTabsFragment();
-        }else if(position==2){
+        }
+        else if(position==2){
             fragment = new ColumbusLandFragment();
-        }else if(position==3){
-            fragment = new LoginFragment();
-        }else if (position==6)
+        }
+        else if (position==6)
         {
             Intent intent = new Intent(this, TheaterWelcomeActivity.class);
             startActivity(intent);

@@ -25,19 +25,6 @@ import java.io.File;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
-/*
-import com.metaio.sdk.ARViewActivity;
-import com.metaio.sdk.MetaioDebug;
-import com.metaio.sdk.jni.IGeometry;
-import com.metaio.sdk.jni.IMetaioSDKCallback;
-import com.metaio.sdk.jni.TrackingValuesVector;
-import com.metaio.tools.io.AssetsManager;
-import com.ming.dayouxia.theaterapp.xmlwriter.Writer;
-import com.romainpiel.shimmer.Shimmer;
-import com.romainpiel.shimmer.ShimmerTextView;
-*/
-
-
 public class ScannerActivity extends ARViewActivity
 {
 

@@ -60,8 +60,7 @@
             android:layout_height="wrap_content"
             android:text="@string/allowemail"
             android:textColor="@color/maintextcolor"
-            android:textSize="15sp"
-            android:onClick="onCheckboxClicked"/>
+            android:textSize="15sp"/>
 
         <Button
             android:id="@+id/new_user_button"
