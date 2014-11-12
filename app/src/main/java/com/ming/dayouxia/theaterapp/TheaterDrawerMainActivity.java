@@ -1,5 +1,6 @@
 package com.ming.dayouxia.theaterapp;
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
@@ -17,9 +18,11 @@ import android.widget.ArrayAdapter;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 
+import com.ming.dayouxia.theaterapp.fragments.AboutFragment;
 import com.ming.dayouxia.theaterapp.fragments.ColumbusLandFragment;
 import com.ming.dayouxia.theaterapp.fragments.InTheaterTabsFragment;
 import com.ming.dayouxia.theaterapp.fragments.LoginDialogFragment;
+import com.ming.dayouxia.theaterapp.fragments.NewsEventFragment;
 
 // note that drawer image needs to be updated for different density screen.
 public class TheaterDrawerMainActivity extends FragmentActivity {
@@ -44,6 +47,13 @@ public class TheaterDrawerMainActivity extends FragmentActivity {
         mDrawerList = (ListView) findViewById(R.id.left_drawer);
         mUserItem = (LinearLayout)getLayoutInflater().inflate(R.layout.user_list_item, null);
 
+        mUserItem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(TheaterDrawerMainActivity.this);
+                builder.create().show();
+            }
+        });
         // set a custom shadow that overlays the main content when the drawer opens
         mDrawerLayout.setDrawerShadow(R.drawable.drawer_shadow, GravityCompat.START);
         // set up the drawer's list view with items and click listener
@@ -176,18 +186,24 @@ public class TheaterDrawerMainActivity extends FragmentActivity {
         // TODO here we will use a switch statement
 
         Fragment fragment = new Fragment();
-        if(position == 0) {
-            fragment = new InTheaterTabsFragment();
+        switch (position){
+            case 0:
+                fragment = new InTheaterTabsFragment();
+                break;
+            case 1:
+                fragment = new NewsEventFragment();
+                break;
+            case 2:
+                fragment = new ColumbusLandFragment();
+                break;
+            case 3:
+                fragment = new AboutFragment();
+                break;
+            case 4:
+                Intent intent = new Intent(this, TheaterWelcomeActivity.class);
+                startActivity(intent);
+                break;
         }
-        else if(position==2){
-            fragment = new ColumbusLandFragment();
-        }
-        else if (position==6)
-        {
-            Intent intent = new Intent(this, TheaterWelcomeActivity.class);
-            startActivity(intent);
-        }
-
 
         if(fragment != null){
             FragmentManager fragmentManager = getSupportFragmentManager();
