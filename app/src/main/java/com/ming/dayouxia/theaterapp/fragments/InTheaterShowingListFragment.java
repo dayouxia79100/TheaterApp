@@ -9,7 +9,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.ming.dayouxia.theaterapp.MovieDetailActivity;
 import com.ming.dayouxia.theaterapp.R;
@@ -23,6 +25,8 @@ import java.util.ArrayList;
 public class InTheaterShowingListFragment extends Fragment {
 
     private ListView mListView;
+    private String[] movieList = {"Star Trek", "Dumb and Dumber to", "The hunger game"};
+    private int[] iconList = {R.drawable.startrek, R.drawable.dumb_and_dumber, R.drawable.hunger_game};
 
 
     public static InTheaterShowingListFragment newInstance(){
@@ -37,7 +41,7 @@ public class InTheaterShowingListFragment extends Fragment {
 
         ArrayList<Movie> movies = new ArrayList();
         for(int i = 0; i < 12; i++){
-            movies.add(new Movie());
+            movies.add(new Movie(movieList[i%3], "Show time: 3:00PM to 6:00 PM", iconList[i%3]));
         }
 
 
@@ -67,7 +71,17 @@ public class InTheaterShowingListFragment extends Fragment {
                 convertView = getActivity().getLayoutInflater()
                         .inflate(R.layout.home_listview_item, parent, false);
             }
-            //Movie movieItem = getItem(position);
+            Movie current =  getItem(position);
+
+            ImageView moviePreview = (ImageView)convertView.findViewById(R.id.movie_preview_image);
+            TextView movieTitle = (TextView) convertView.findViewById(R.id.movie_name_text);
+            TextView showTime = (TextView) convertView.findViewById(R.id.show_time_text);
+
+            moviePreview.setImageResource(current.getIcon());
+            movieTitle.setText(current.getMovieName());
+            showTime.setText(current.getShowTime());
+
+
             return convertView;
         }
     }
