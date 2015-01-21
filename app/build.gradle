@@ -24,5 +24,7 @@ dependencies {
     compile 'com.android.support:support-v4:20.0.0'
     compile 'com.github.castorflex.smoothprogressbar:library-circular:1.0.1'
     compile project(':viewpageindicator')
+
     compile files('/library/json-simple-1.1.1.jar')
+
 }
