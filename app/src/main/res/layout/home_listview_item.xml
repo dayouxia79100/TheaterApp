@@ -37,10 +37,16 @@
         </LinearLayout>
 
     <Button
+        android:id="@+id/button_purchase"
         android:layout_width="0dp"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="+ button"/>
+        android:text="purchase"
+
+        android:layout_gravity="center"
+        android:textColor="@color/holo_blue_dark"
+        android:background="@drawable/button_purchase"
+        android:clickable="true"/>
 
 
 </LinearLayout>

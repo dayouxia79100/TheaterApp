@@ -8,11 +8,29 @@
         revision="19.1.0"
         sha1="59772e5fdaf31ee8077a6681325cb438c9917821"/>
     <item
+        dex="C:\Users\Angello\TheaterApp\app\build\intermediates\pre-dexed\debug\classes-22afcbc7b23ac3655ac73d54d092758075318051.jar"
+        jar="C:\Users\Angello\TheaterApp\app\build\intermediates\exploded-aar\com.fortysevendeg.swipelistview\swipelistview\1.0-SNAPSHOT\classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="f7b3ac367f7ff01ec4fa2d7130a471073370bdb3"/>
+    <item
+        dex="C:\Users\Angello\TheaterApp\app\build\intermediates\pre-dexed\debug\classes-58f1a49dccc2023ec8ab6d820ecbb3f8a250fa51.jar"
+        jar="C:\Users\Angello\TheaterApp\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\19.0.1\classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="f71a6822470c9eb659d4f4a6cb57b780b35f058b"/>
+    <item
         dex="C:\Users\Angello\TheaterApp\app\build\intermediates\pre-dexed\debug\classes-4207dd9e68df0c555f26982bd119cf9edd5836cf.jar"
         jar="C:\Users\Angello\TheaterApp\app\build\intermediates\exploded-aar\com.romainpiel.shimmer\library\1.2.0\classes.jar"
         jumboMode="false"
         revision="19.1.0"
         sha1="2ace5ecb0696f80c31a12bd4d00f49478c386f91"/>
+    <item
+        dex="C:\Users\Angello\TheaterApp\app\build\intermediates\pre-dexed\debug\library-2.4.0-29524be66fd4817b854d52c071fb7a0a5d984693.jar"
+        jar="C:\Users\Angello\.gradle\caches\modules-2\files-2.1\com.nineoldandroids\library\2.4.0\e9b63380f3a242dbdbf103a2355ad7e43bad17cb\library-2.4.0.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb"/>
     <item
         dex="C:\Users\Angello\TheaterApp\app\build\intermediates\pre-dexed\debug\json-simple-1.1-f473c5a36be3476b134a88f313f9bcb96ff58a95.jar"
         jar="C:\Users\Angello\TheaterApp\json-simple-1.1.jar"

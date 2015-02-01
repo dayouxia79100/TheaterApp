@@ -30,7 +30,7 @@ public class TheaterWelcomeActivity extends FragmentActivity {
         setContentView(R.layout.activity_welcome);
 
         // Generate sample data
-        imageArray = new int[]{R.drawable.welcomepage1, R.drawable.welcomepage2, R.drawable.welcomepage3};
+        imageArray = new int[]{ R.drawable.gatewaysign , R.drawable.main_screen, R.drawable.welcomepage3};
 
         // Locate the ViewPager in viewpager_main.xml
         viewPager = (ViewPager) findViewById(R.id.pager);
@@ -49,7 +49,7 @@ public class TheaterWelcomeActivity extends FragmentActivity {
             public void onPageScrolled(int i, float v, int i2) {
 
                 if (i == imageArray.length - 1) {
-                    Log.d("Log:", "" + v);
+                    Log.d("Log:", "heeeereee" + v);
 
 
                     Handler handler = new Handler();
@@ -59,6 +59,7 @@ public class TheaterWelcomeActivity extends FragmentActivity {
                             startActivity(intent);
                         }
                     }, 1000);
+
                 }
             }
 

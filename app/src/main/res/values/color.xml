@@ -9,6 +9,7 @@
     <color name="hint">#80808080</color>
     <color name="main_color_cyan">#6ca8a4</color>
     <color name="gray_light">#808080</color>
+    <color name="daveys_dark_gray">#555555</color>
     <color name="accountform_title">#040404</color>
     <color name="accountform_field">#808080</color>
 

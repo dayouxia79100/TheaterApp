@@ -1,9 +1,12 @@
 package com.ming.dayouxia.theaterapp;
 
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -22,6 +25,7 @@ import com.ming.dayouxia.theaterapp.fragments.AboutFragment;
 import com.ming.dayouxia.theaterapp.fragments.ColumbusLandFragment;
 import com.ming.dayouxia.theaterapp.fragments.InTheaterTabsFragment;
 import com.ming.dayouxia.theaterapp.fragments.LoginDialogFragment;
+import com.ming.dayouxia.theaterapp.fragments.MovieTicketsWebFragment;
 import com.ming.dayouxia.theaterapp.fragments.NewsEventFragment;
 
 // note that drawer image needs to be updated for different density screen.
@@ -95,6 +99,15 @@ public class TheaterDrawerMainActivity extends FragmentActivity {
     @Override
     protected void onResume() {
         super.onResume();
+
+
+        Boolean firstTime = getSharedPreferences("Install", Context.MODE_PRIVATE).getBoolean("first", false);
+
+        if(!firstTime){
+            getSharedPreferences("Install",Context.MODE_PRIVATE).edit().putBoolean("first",true).commit();
+            Intent intent= new Intent(this, TheaterWelcomeActivity.class);
+            startActivity(intent);
+        }
         addHeaderViewIfNeeded();
     }
 
@@ -110,6 +123,7 @@ public class TheaterDrawerMainActivity extends FragmentActivity {
         if(CurrentUserSession.getInstance().isLoggedIn()){
             mDrawerList.addHeaderView(mUserItem);
         }
+
 
     }
 
@@ -172,6 +186,7 @@ public class TheaterDrawerMainActivity extends FragmentActivity {
     }
 
 
+
     /* The click listner for ListView in the navigation drawer */
     private class DrawerItemClickListener implements ListView.OnItemClickListener {
         @Override
@@ -179,8 +194,7 @@ public class TheaterDrawerMainActivity extends FragmentActivity {
             selectItem(position);
         }
     }
-
-    private void selectItem(int position) {
+    public void selectItem(int position) {
 
         // update the main content by replacing fragments
         // TODO here we will use a switch statement
@@ -203,7 +217,7 @@ public class TheaterDrawerMainActivity extends FragmentActivity {
                 Intent intent = new Intent(this, TheaterWelcomeActivity.class);
                 startActivity(intent);
                 break;
-        }
+            }
 
         if(fragment != null){
             FragmentManager fragmentManager = getSupportFragmentManager();
@@ -216,6 +230,7 @@ public class TheaterDrawerMainActivity extends FragmentActivity {
         mDrawerLayout.closeDrawer(mDrawerList);
     }
 
+        // update selected item and title, then close the drawer
     @Override
     public void setTitle(CharSequence title) {
         mTitle = title;

@@ -7,7 +7,7 @@
     <string name="action_login">Log in</string>
     <string name="action_logout">Log out</string>
     <string name="action_scan">Scan</string>
-
+    <string name="first_launch">Launch</string>
     <!-- Tab names for movie list fragment -->
     <string name="movie_now_showing">Now Showing</string>
     <string name="movie_coming_soon">Comming Soon</string>
@@ -18,11 +18,11 @@
 
     <!-- Options available in the drawer -->
     <string-array name="drawer_list">
-        <item>In Theater</item>
+        <item>Movie Listing</item>
         <item>News Event</item>
         <item>Columbusland</item>
         <item>About</item>
-        <item>Welcome Page</item>
+        <item>Home</item>
     </string-array>
 
     <!--  -->

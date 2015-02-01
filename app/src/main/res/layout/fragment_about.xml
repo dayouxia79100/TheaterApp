@@ -1,14 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/about"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gatewaysign"
+        android:scaleType="centerCrop">
 
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="This is about fragment"
-        android:textSize="36sp"
-        android:gravity="center"/>
+            android:id="@+id/copyright"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Copyright © 2013\nEduTechnologic,llc"
+        style="@style/PrefFont"
+        android:layout_gravity="left|top"></TextView>
 
-</LinearLayout>
+    <TextView
+        android:id="@+id/gateway_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1550 High Street\nColumbus Ohio 43201\n6142474433"
+        android:layout_gravity="right|bottom"
+        style="@style/Gateway_add_Font"></TextView>
+
+</FrameLayout>
+
+

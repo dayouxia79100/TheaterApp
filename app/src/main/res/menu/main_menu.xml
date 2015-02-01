@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    >
 
     <item android:id="@+id/action_scanner"
         android:title="@string/action_scan"
-        android:icon="@android:drawable/ic_menu_camera"
+        android:icon="@drawable/ic_camera"
         android:orderInCategory="100"
-        android:showAsAction="ifRoom" />
+        android:showAsAction="ifRoom"/>
 
     <item android:id="@+id/action_login"
         android:title="@string/action_login"
         android:orderInCategory="100"
         android:showAsAction="never" />
+
     <item android:id="@+id/action_logout"
         android:title="@string/action_logout"
         android:orderInCategory="100"

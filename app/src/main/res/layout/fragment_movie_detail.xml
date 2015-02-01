@@ -6,68 +6,106 @@
     android:layout_marginLeft="@dimen/activity_horizontal_margin"
     android:layout_marginTop="@dimen/activity_vertical_margin"
     android:layout_marginBottom="@dimen/activity_vertical_margin"
-    android:layout_height="match_parent"
-    >
+    android:layout_height="match_parent">
 
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Iron man 3"
-        android:gravity="center"
-        android:textSize="36sp"
-        />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        >
 
         <ImageView
-            android:layout_width="0dp"
-            android:adjustViewBounds="true"
+            android:id="@+id/movie_pic"
+            android:layout_width="118dp"
+
             android:maxHeight="110dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:scaleType="fitXY"
+            android:layout_height="175dp"
+
+            android:scaleType="centerCrop"
             android:src="@drawable/startrek"/>
-
-        <LinearLayout
-            android:layout_width="0dp"
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical">
-            
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Running Time:"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="130 mins"
-                android:layout_marginBottom="12dp"/>
+            android:text="Iron man 3"
+            android:layout_toEndOf="@+id/movie_pic"
+            android:layout_marginStart="10dp"
+            android:textSize="36sp"
+            android:id="@+id/text_title"
+            />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Genre: Action"
-                android:layout_marginBottom="12dp"/>
+      <TextView
+            android:id="@+id/text_release"
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Release Date:"/>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Release Date:"
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="May 3, 2013"/>
-            </LinearLayout>
-        </LinearLayout>
+          android:layout_below="@+id/text_title"
+          android:layout_alignStart="@+id/text_title" />
+    <TextView
+        android:id="@+id/text_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="May 3, 2013"
+
+
+        android:layout_below="@+id/text_release"
+        android:layout_alignStart="@+id/text_release" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Running Time:"
+
+            android:layout_below="@+id/text_date"
+            android:layout_alignStart="@+id/text_date"
+            android:layout_marginTop="32dp"
+            android:id="@+id/textView" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="130 mins"
+            android:id="@+id/timeText"
+            android:layout_below="@+id/textView"
+            android:layout_alignStart="@+id/textView" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/timeText"
+            android:layout_alignStart="@+id/timeText"
+            android:text="Genre: Action"/>
+
+            />
+    </RelativeLayout>
+
 
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Synopsis starts here"/>
+        android:text="Synopsis starts here"
+         />
+
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+
+        >
+
+        <Button
+            android:id="@+id/button_purchase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="purchase"
+            android:layout_gravity="bottom"
+
+            android:textColor="@color/holo_blue_dark"
+            android:background="@drawable/button_purchase"
+            android:clickable="true"/>
+    </LinearLayout>
 
 </LinearLayout>
